@@ -1,0 +1,47 @@
+body.dashboard-body {
+    background-color: #f8f5f0;
+}
+
+.summary-card {
+    background-color: #d1bfa7;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.report-box {
+    background: #fdf6f0;
+    border: 2px solid #d1bfa7;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.section-title {
+    color: #7d5f47;
+    font-weight: bold;
+    margin-top: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #d1bfa7;
+}
+
+input, select {
+    border: 1px solid #b9a495;
+    background: #fcf8f3;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #d1bfa7;
+    padding: 15px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.product-image {
+    width: 100%;
+    height: 150px;
+    background: #ddd;
+    border-radius: 5px;
+}

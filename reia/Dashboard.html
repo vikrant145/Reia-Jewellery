@@ -18,8 +18,27 @@
 </head>
 <body>
     <div class="d-flex">
-        <!-- Sidebar -->
-        <div id="sidebar" class="sidebar d-flex flex-column">
+       
+        
+        <!-- Main Content -->
+        <header class="d-flex justify-content-between align-items-center p-3 shadow-none border">
+            <!-- Sidebar Toggle -->
+            <button id="toggle-sidebar" class="btn btn-outline-dark btn-sm border-0">
+                <i class="bi bi-list"></i>
+            </button>
+            <!-- Logo -->
+            <div class="text-center">
+                <img src="images/reiajewellerylogo.png" alt="Reia Logo" class="header-logo">
+            </div>
+            <!-- Profile Section -->
+            <div class="d-flex align-items-center">
+                <span class="me-2">reiaadmin</span>
+                <i class="bi bi-person"></i>
+            </div>
+        </header>
+
+         <!-- Sidebar -->
+         <div id="sidebar" class="sidebar d-flex flex-column">
             <div class="logo mb-3 d-flex align-items-center ps-3">
                 <img src="images/logo2.png" alt="Logo" class="small-logo me-2">
                 <span class="text-dark fw-bold">reiaadmin</span>
@@ -101,26 +120,11 @@
             </ul>
         </div>
 
-        <!-- Main Content -->
-        <header class="d-flex justify-content-between align-items-center p-3 shadow-none border">
-            <!-- Sidebar Toggle -->
-            <button id="toggle-sidebar" class="btn btn-outline-dark btn-sm border-0">
-                <i class="bi bi-list"></i>
-            </button>
-            <!-- Logo -->
-            <div class="text-center">
-                <img src="images/reiajewellerylogo.png" alt="Reia Logo" class="header-logo">
-            </div>
-            <!-- Profile Section -->
-            <div class="d-flex align-items-center">
-                <span class="me-2">reiaadmin</span>
-                <i class="bi bi-person"></i>
-            </div>
-        </header>
+        
         
         <!-- Status Section -->
-        <div class="main-content flex-grow-1">
-            <div class="container mt-4">
+        <div class="main-content flex-grow-1 mt-5">
+            <div class="container-fluid mt-4">
                 <p>Home / Dashboard</p>
                 <div class="dashboardstats-container">
                     <div class="dashboardstat-card">
@@ -167,7 +171,7 @@
                 </div>
             
             <!-- Report Section -->
-            <div class="container">
+            <div class="container-fluid">
                 <div class="dashboardreport-card">
                     <div class="dashboardsection-title">REPORT</div>
             
@@ -176,54 +180,54 @@
                     <div class="row dasboardrow">
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>SKU / HUID</label>
-                            <select class="form-select dashboardform-select">
+                            <select class="form-select dashboardform-select mt-2">
                                 <option>SKU / HUID</option>
                             </select>
                         </div>
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Collection Code</label>
-                            <select class="form-select dashboardform-select">
+                            <select class="form-select dashboardform-select mt-2">
                                 <option>Collection Code</option>
                             </select>
                         </div>
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Product Category</label>
-                            <select class="form-select dashboardform-select">
+                            <select class="form-select dashboardform-select mt-2">
                                 <option>Product Category</option>
                             </select>
                         </div>
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Product Size</label>
-                            <select class="form-select dashboardform-select">
+                            <select class="form-select dashboardform-select mt-2">
                                 <option>Product Size</option>
                             </select>
                         </div>
                     </div>
             
-                    <div class="row mt-2 dasboardrow">
+                    <div class="row mt-3 dasboardrow">
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Parent Code</label>
-                            <select class="form-select dashboardform-select">
+                            <select class="form-select dashboardform-select mt-2">
                                 <option>Parent Code</option>
                             </select>
                         </div>
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Final Price (Min)</label>
-                            <input type="text" class="form-control dashboardform-control" placeholder="Rs. 1,00,000">
+                            <input type="text" class="form-control dashboardform-control mt-2" placeholder="Rs. 1,00,000">
                         </div>
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Final Price (Max)</label>
-                            <input type="text" class="form-control dashboardform-control" placeholder="Rs. 2,00,000">
+                            <input type="text" class="form-control dashboardform-control mt-2" placeholder="Rs. 2,00,000">
                         </div>
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Stock Location</label>
-                            <select class="form-select dashboardform-select">
+                            <select class="form-select dashboardform-select mt-2">
                                 <option>Stock Location</option>
                             </select>
                         </div>
-                        <div class="col-md-3 dasboardcol-md-3">
+                        <div class="col-md-3 mt-3 dasboardcol-md-3">
                             <label>Status</label>
-                            <select class="form-select dashboardform-select">
+                            <select class="form-select dashboardform-select mt-2">
                                 <option>Status</option>
                             </select>
                         </div>
@@ -234,20 +238,20 @@
                     <div class="row dasboardrow">
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Gross Weight (Min)</label>
-                            <input type="text" class="form-control dashboardform-control" placeholder="20 grams">
+                            <input type="text" class="form-control dashboardform-control mt-2" placeholder="20 grams">
                         </div>
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Gross Weight (Max)</label>
-                            <input type="text" class="form-control dashboardform-control" placeholder="10 grams">
+                            <input type="text" class="form-control dashboardform-control mt-2" placeholder="10 grams">
                         </div>
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Net Weight (Min)</label>
-                            <input type="text" class="form-control dashboardform-control" placeholder="10 grams">
+                            <input type="text" class="form-control dashboardform-control mt-2" placeholder="10 grams">
                         </div>
                     
                     <div class="col-md-3 dasboardcol-md-3">
                         <label>Net Weight (Max)</label>
-                        <input type="text" class="form-control dashboardform-control " placeholder="10 grams">
+                        <input type="text" class="form-control dashboardform-control mt-2" placeholder="10 grams">
                     </div>
                     
                     </div>
@@ -256,11 +260,11 @@
                      <div class="row mt-3 dasboardrow">
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Gold Weight (Min)</label>
-                            <input type="text" class="form-control dashboardform-control" placeholder="20 grams">
+                            <input type="text" class="form-control dashboardform-control mt-2" placeholder="20 grams">
                         </div>
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Gold Weight (Max)</label>
-                            <input type="text" class="form-control dashboardform-control" placeholder="10 grams">
+                            <input type="text" class="form-control dashboardform-control mt-2" placeholder="10 grams">
                         </div>
                      </div>
             
@@ -269,19 +273,19 @@
                     <div class="row dasboardrow">
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Metal Purity</label>
-                            <select class="form-select dashboardform-select">
+                            <select class="form-select dashboardform-select mt-2">
                                 <option>Metal Purity</option>
                             </select>
                         </div>
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Metal Colour</label>
-                            <select class="form-select dashboardform-select">
+                            <select class="form-select dashboardform-select mt-2">
                                 <option>Metal Colour</option>
                             </select>
                         </div>
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Metal Type</label>
-                            <select class="form-select dashboardform-select">
+                            <select class="form-select dashboardform-select mt-2">
                                 <option>Metal Type</option>
                             </select>
                         </div>
@@ -292,41 +296,41 @@
                     <div class="row dasboardrow">
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Diamond Colour</label>
-                            <select class="form-select dashboardform-select">
+                            <select class="form-select dashboardform-select mt-2">
                                 <option>Diamond Colour</option>
                             </select>
                         </div>
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Diamond Clarity</label>
-                            <select class="form-select dashboardform-select">
+                            <select class="form-select dashboardform-select mt-2">
                                 <option>Diamond Clarity</option>
                             </select>
                         </div>
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Max Stone Size (Min)</label>
-                            <input type="text" class="form-control dashboardform-control" placeholder="1 carat">
+                            <input type="text" class="form-control dashboardform-control mt-2" placeholder="1 carat">
                         </div>
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Max Stone Size (Max)</label>
-                            <input type="text" class="form-control dashboardform-control" placeholder="2 carats">
+                            <input type="text" class="form-control dashboardform-control mt-2" placeholder="2 carats">
                         </div>
                     </div>
                     <div class="row mt-3 dasboardrow">
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Total Diamond Carat (Min)</label>
-                            <input type="text" class="form-control dashboardform-control" placeholder="Total Diamond Carat">
+                            <input type="text" class="form-control dashboardform-control mt-2" placeholder="Total Diamond Carat">
                         </div>
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Total Diamond Carat (Max)</label>
-                            <input type="text" class="form-control dashboardform-control" placeholder="Tota Diamond">
+                            <input type="text" class="form-control dashboardform-control mt-2" placeholder="Tota Diamond">
                         </div>
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Gemstone Carat (Min)</label>
-                            <input type="text" class="form-control dashboardform-control" placeholder="Gemstone Carat">
+                            <input type="text" class="form-control dashboardform-control mt-2" placeholder="Gemstone Carat">
                         </div>
                         <div class="col-md-3 dasboardcol-md-3">
                             <label>Gemstone Carat (Max)</label>
-                            <input type="text" class="form-control dashboardform-control" placeholder="Gemstone Carot (to)">
+                            <input type="text" class="form-control dashboardform-control mt-2" placeholder="Gemstone Carot (to)">
                         </div>
                     </div>
             
@@ -339,7 +343,7 @@
             
              <!-- Weight Details and Export Buttons -->
             <!-- Weight Details and Export Buttons in a Box -->
-            <div class="container mt-3">
+            <div class="container-fluid mt-3">
                 <div class="d-flex justify-content-between align-items-center p-3 dasboardjustify-content-between dashboardd-flex weight-container">
                     <!-- Left Side: Boxed Weight Details -->
                     <div class="d-flex dashboardd-flex">
@@ -358,7 +362,7 @@
             
             
             <!-- PRODUCTS AVAILABLE Section -->
-            <div class="container mt-4">
+            <div class="container-fluid mt-4">
                 <div class="dashboardreport-card">
                     <!-- Search Section Inside a White Card -->
                     <div class="card p-3 mb-3">
@@ -414,6 +418,7 @@
             
         </div>
     </div>
+</div>
     <script>
     document.addEventListener("DOMContentLoaded", function () {
     const sidebar = document.getElementById("sidebar");

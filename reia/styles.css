@@ -357,3 +357,197 @@ header {
 }
   
 
+
+
+
+
+/* ItemUploadScreen */
+
+.itemuploadcontainer{
+    margin-top: 30px;
+}
+.dashboardsection-title {
+    background-color: white;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.totalrecordsh5 {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* Table Styling */
+.custom-table {
+    border: 1px solid #ddd; /* Table border */
+}
+
+.custom-table th,
+.custom-table td {
+    border: 1px solid #ddd; /* Border for table cells */
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Header Styling */
+.custom-table-header {
+    background-color: #f1f1f1;
+    text-align: left;
+}
+
+
+.custom-table .center-align {
+    text-align: center;
+}
+
+
+.sampleuploadformatbtn{
+    background-color: #a19487 !important;
+    font-weight: bold !important;
+    color: white;
+    border: none;
+}
+.submitbtnitemupload{
+    background-color: #a19487 !important;
+    font-weight: bold !important;
+    color: white;
+}
+.itemuploadcardmain{
+    background-color: #f4ecdc;
+
+}
+.selectformitemupload{
+    background-color:#a19487;
+    color: white;
+}
+
+.itemuploadpagination {
+    background-color: #a19487; 
+    padding: 10px; 
+    border-radius: 5px; 
+}
+
+
+
+
+
+.itemuploadcardmain{
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .fileuploaddflexmb3{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .sampleuploadformatbtn,
+    .submitbtnitemupload {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dflexalignitemscenterlabelinput .fileuploadlabel {
+        width: 100%;
+        text-align: left;
+    }
+
+    .dflexalignitemscenterlabelinput.fileuploadinput[type="file"] {
+        width: 100%;
+    }
+}
+
+/* Smaller Screens (Tablets & Small Laptops) */
+@media (max-width: 768px) {
+    .itemuploadcontainer {
+        padding: 10px;
+    }
+
+    .custom-table th,
+    .custom-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .custom-table-header {
+        font-size: 14px;
+    }
+
+    .totalrecordsh5 {
+        font-size: 16px;
+    }
+
+    .selectformitemupload,
+    .searchinputitemupload {
+        width: 100%;
+    }
+
+    .itemuploadpagination {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .itemuploadpagination .page-item {
+        margin: 3px;
+    }
+}
+
+/* Very Small Screens (Mobile Phones) */
+@media (max-width: 480px) {
+    .dashboardsection-title {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .custom-table th,
+    .custom-table td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .sampleuploadformatbtn,
+    .submitbtnitemupload {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .dflexjustifycontentbetweenoverall {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .dflexjustifycontentbetweenoverall .entriesdisplayp {
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 382px) {
+    .fileuploadinput {
+        width: 100% !important;
+    }
+
+    .dflexalignitemscenterlabelinput {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .fileuploadlabel {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+
+
+
+
+
+
+
+
+

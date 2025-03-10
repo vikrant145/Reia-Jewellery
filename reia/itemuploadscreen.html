@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Upload</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  
+  
+    
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="container mt-4">
+        <div class="card itemuploadcardmain">
+           
+            <!-- Card Body -->
+            <div class="card-body">
+                 <!-- Card Header -->
+            <div class="dashboardsection-title">
+                <strong>Item Upload</strong>
+            </div>
+
+                <!-- File Upload Section -->
+                <div class="d-flex align-items-center mb-3 fileuploaddflexmb3">
+                    <!-- Sample Upload Format button (Left Side) -->
+                    <button class="btn btn-info me-auto sampleuploadformatbtn">Sample Upload Format</button>
+
+                    <!-- File Upload (Moved further left) -->
+                    <div class="d-flex align-items-center dflexalignitemscenterlabelinput">
+                        <label for="fileUpload" class="fw-bold me-2 fileuploadlabel">File:</label>
+                        <input type="file" id="fileUpload" class="form-control w-auto fileuploadinput">
+                    </div>
+
+                    <!-- Submit Button (Right Side) -->
+                    <button class="btn ms-auto submitbtnitemupload">Submit</button>
+                </div>
+
+                <hr>
+                
+                <div class="container itemuploadcontainer">
+                    <h5 class="totalrecordsh5">Total Records : 1112</h5>
+            
+                    <div class="d-flex justify-content-between mb-3 dflexjustifycontentbetweenoverall">
+                        <div>
+                            <label>Show 
+                                <select class="form-select d-inline-block w-auto selectformitemupload">
+                                    <option>25</option>
+                                    <option>50</option>
+                                    <option>100</option>
+                                </select> entries
+                            </label>
+                        </div>
+                        <div>
+                            <label>Search:
+                                <input type="text" class="form-control d-inline-block w-auto searchinputitemupload">
+                            </label>
+                        </div>
+                    </div>
+            
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered custom-table">
+                            <thead>
+                                <tr>
+                                    <th class="custom-table-header">
+                                        # 
+                                        <button class="btn btn-sm">
+                                            <i class="bi bi-arrow-down-up"></i>
+                                        </button>
+                                    </th>
+                                    <th class="custom-table-header center-align">
+                                        Datetime
+                                        <button class="btn btn-sm">
+                                            <i class="bi bi-arrow-down-up"></i>
+                                        </button>
+                                    </th>
+                                    <th class="custom-table-header">
+                                        File
+                                        <button class="btn btn-sm">
+                                            <i class="bi bi-arrow-down-up"></i>
+                                        </button>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td class="center-align">05/03/2025 18:54:32</td><td><a href="#">View</a></td></tr>
+                                <tr><td>2</td><td class="center-align">04/03/2025 18:51:12</td><td><a href="#">View</a></td></tr>
+                                <tr><td>3</td><td class="center-align">03/03/2025 18:32:49</td><td><a href="#">View</a></td></tr>
+                                <tr><td>4</td><td class="center-align">02/03/2025 21:37:37</td><td><a href="#">View</a></td></tr>
+                                <tr><td>5</td><td class="center-align">01/03/2025 16:50:29</td><td><a href="#">View</a></td></tr>
+                                <tr><td>6</td><td class="center-align">28/02/2025 18:17:53</td><td><a href="#">View</a></td></tr>
+                                <tr><td>7</td><td class="center-align">27/02/2025 18:13:48</td><td><a href="#">View</a></td></tr>
+                                <tr><td>8</td><td class="center-align">26/02/2025 12:37:37</td><td><a href="#">View</a></td></tr>
+                                <tr><td>9</td><td class="center-align">25/02/2025 15:23:14</td><td><a href="#">View</a></td></tr>
+                                <tr><td>10</td><td class="center-align">25/02/2025 14:58:52</td><td><a href="#">View</a></td></tr>
+                                <tr><td>11</td><td class="center-align">24/02/2025 18:57:25</td><td><a href="#">View</a></td></tr>
+                                <tr><td>12</td><td class="center-align">23/02/2025 18:40:41</td><td><a href="#">View</a></td></tr>
+                                <tr><td>13</td><td class="center-align">23/02/2025 14:38:38</td><td><a href="#">View</a></td></tr>
+                                <tr><td>14</td><td class="center-align">22/02/2025 18:19:01</td><td><a href="#">View</a></td></tr>
+                                <tr><td>15</td><td class="center-align">21/02/2025 18:10:04</td><td><a href="#">View</a></td></tr>
+                                <tr><td>16</td><td class="center-align">21/02/2025 11:59:33</td><td><a href="#">View</a></td></tr>
+                                <tr><td>17</td><td class="center-align">21/02/2025 11:53:35</td><td><a href="#">View</a></td></tr>
+                                <tr><td>18</td><td class="center-align">20/02/2025 18:44:13</td><td><a href="#">View</a></td></tr>
+                                <tr><td>19</td><td class="center-align">20/02/2025 18:26:43</td><td><a href="#">View</a></td></tr>
+                                <tr><td>20</td><td class="center-align">19/02/2025 18:34:10</td><td><a href="#">View</a></td></tr>
+                                <tr><td>21</td><td class="center-align">19/02/2025 17:46:16</td><td><a href="#">View</a></td></tr>
+                                <tr><td>22</td><td class="center-align">18/02/2025 16:57:15</td><td><a href="#">View</a></td></tr>
+                                <tr><td>23</td><td class="center-align">17/02/2025 18:38:25</td><td><a href="#">View</a></td></tr>
+                                <tr><td>24</td><td class="center-align">17/02/2025 17:55:55</td><td><a href="#">View</a></td></tr>
+                                <tr><td>25</td><td class="center-align">17/02/2025 17:48:59</td><td><a href="#">View</a></td></tr>
+                            </tbody>
+                        </table>
+                        
+                    </div>
+            
+                    <div class="d-flex justify-content-between dflexjustifycontentbetweenoverall">
+                        <p class="entriesdisplayp">Showing 1 to 25 of 1,112 entries</p>
+                        <nav>
+                            <ul class="pagination itemuploadpagination">
+                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">...</a></li>
+                                <li class="page-item"><a class="page-link" href="#">45</a></li>
+                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            
+               
+            
+            </div>
+
+          
+        </div>
+          <!-- Card Footer -->
+          <div class="text-center text-muted">
+            &copy; 2025 @REIA. All rights reserved.
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

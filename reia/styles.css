@@ -554,7 +554,157 @@ header {
     }
 }
 
+.itemdetailsscreenfirst-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white; /* White background */
+    padding: 10px 15px;
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid #e0d6c9; /* Light border to match */
+}
 
+.instockblr-btn,
+.instockexportexcel-btn {
+    background: #a3917f; /* Matching button color */
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.puzh68{
+    font-weight: bold;
+    font-size: 14px;
+    color: #a3917f; /* Match text color */
+}
+
+.itemdetailssearch-bar{
+    background: #f3e9db; /* Light beige background */
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.itemdetailssearch-container {
+    text-align: center;
+}
+
+.itemdetailssearch-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.itemdetailssearch-input {
+    width: 250px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.itemdetailssearch-btn {
+    background: #a3917f;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.itemdetailsscreen-card {
+    background: #f5ede0;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+
+
+/* === FIX: Remove extra margin from section titles === */
+.itemdetailssection-title {
+    font-weight: bold;
+    border-bottom: 2px solid #a3917f;
+    padding-bottom: 5px;
+    margin-top: 0; /* Fixes alignment issue */
+    margin-bottom: 10px; /* Keeps spacing consistent */
+}
+
+
+/* === Product Details Styling === */
+.itemdetailsdetails-box {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* === Image Placeholder Styling === */
+.itemdetailsimage-placeholder {
+    background: #555;
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+}
+
+/* === Price Section Styling === */
+.itemdetailsprice-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 20px; /* Adjust gap if needed */
+}
+
+.itemdetailsleft-section {
+    flex: 1;
+}
+
+.itemdetailsright-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* Space between price boxes */
+}
+
+.itemdetailsprice-box {
+    background: #a3917f;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    width: 160px; /* Adjusted size */
+}
+@media only screen and (max-width:435px) {
+    .itemdetailsfirstsearchbox{
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width:1150px) {
+    .itemdetailsprice-wrapper {
+        flex-direction: column;
+    }    
+    
+}
+@media (min-width: 768px) and (max-width: 845px) {
+    .itemdetailsprice-box{
+        width: 100px;
+  }
+}
+    
+    
+    
 
 
 

@@ -8,15 +8,120 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Bootstrap Icons -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   
   
     
 </head>
 <body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div id="sidebar" class="sidebar d-flex flex-column">
+            <div class="logo mb-3 d-flex align-items-center ps-3">
+                <img src="images/logo2.png" alt="Logo" class="small-logo me-2">
+                <span class="text-dark fw-bold">reiaadmin</span>
+            </div>
+
+            <ul class="nav flex-column flex-grow-1">
+                <li class="nav-item mb-2">
+                    <a href="#" class="nav-link active text-dark fw-bold">
+                        <i class="bi bi-house-door me-2"></i>
+                        <span class="link-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-dark">
+                        <i class="bi bi-tag me-2"></i>
+                        <span class="link-text">Item Details</span>
+                        <i class="bi bi-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="list-unstyled ms-5 submenu-options">
+                        <li>
+                            <label class="d-flex align-items-center">
+                                <input type="radio" name="menu" class="custom-radio me-2">
+                                SKU/HUID
+                            </label>
+                        </li>
+                        <li>
+                            <label class="d-flex align-items-center">
+                                <input type="radio" name="menu" class="custom-radio me-2">
+                                Parent Code
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-dark">
+                        <i class="bi bi-list me-2"></i>
+                        <span class="link-text">Items Update</span>
+                        <i class="bi bi-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="list-unstyled ms-5 submenu-options">
+                        <li>
+                            <label class="d-flex align-items-center">
+                                <input type="radio" name="menu" class="custom-radio me-2">
+                                In Stock
+                            </label>
+                        </li>
+                        <li>
+                            <label class="d-flex align-items-center">
+                                <input type="radio" name="menu" class="custom-radio me-2">
+                                Purchase
+                            </label>
+                        </li>
+                        <li>
+                            <label class="d-flex align-items-center">
+                                <input type="radio" name="menu" class="custom-radio me-2">
+                                Sold
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-dark">
+                        <i class="bi bi-card-image me-2"></i>
+                        <span class="link-text">Image Upload</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-dark">
+                        <i class="bi bi-box-arrow-up-right me-2"></i>
+                        <span class="link-text">Item Stock Update</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-dark">
+                        <i class="bi bi-box-arrow-left me-2"></i>
+                        <span class="link-text">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <header class="d-flex justify-content-between align-items-center p-3 shadow-none border">
+            <!-- Sidebar Toggle -->
+            <button id="toggle-sidebar" class="btn btn-outline-dark btn-sm border-0">
+                <i class="bi bi-list"></i>
+            </button>
+            <!-- Logo -->
+            <div class="text-center">
+                <img src="images/reiajewellerylogo.png" alt="Reia Logo" class="header-logo">
+            </div>
+            <!-- Profile Section -->
+            <div class="d-flex align-items-center">
+                <span class="me-2">reiaadmin</span>
+                <i class="bi bi-person"></i>
+            </div>
+        </header>
+        
+        <!-- Status Section -->
+        <div class="main-content flex-grow-1 mt-5">
 
     <!-- Main Container -->
     <div class="container mt-4">
-        <div class="card itemuploadcardmain">
+        <div class="itemuploadmain-card">
            
             <!-- Card Body -->
             <div class="card-body">
@@ -146,7 +251,107 @@
             &copy; 2025 @REIA. All rights reserved.
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const sidebar = document.getElementById("sidebar");
+        const toggleSidebarBtn = document.getElementById("toggle-sidebar");
+        const navItems = document.querySelectorAll(".nav-item");
+        const navLabels = document.querySelectorAll(".nav-item span"); // Select text labels
+        const dropdownIcons = document.querySelectorAll(".dropdown-icon");
+        const submenus = document.querySelectorAll(".submenu-options");
+        const mainContent = document.querySelector(".main-content");
+    
+        let isSidebarCollapsed = false;
+    
+        function adjustMainContent() {
+            if (window.innerWidth > 767) {
+                mainContent.style.marginLeft = sidebar.classList.contains("collapsed") ? "80px" : "250px";
+            } else {
+                mainContent.style.marginTop = "56px";
+                mainContent.style.marginLeft = "0";
+            }
+        }
+    
+        adjustMainContent();
+        window.addEventListener("resize", adjustMainContent);
+    
+        toggleSidebarBtn.addEventListener("click", function () {
+            if (window.innerWidth <= 767) {
+                sidebar.classList.toggle("expanded");
+                document.body.classList.toggle("sidebar-open");
+            } else {
+                isSidebarCollapsed = !isSidebarCollapsed;
+                sidebar.classList.toggle("collapsed");
+    
+                // Hide text labels when collapsed
+                navLabels.forEach(label => {
+                    label.style.display = isSidebarCollapsed ? "none" : "inline-block";
+                });
+    
+                // Hide dropdown icons when collapsed
+                dropdownIcons.forEach(icon => {
+                    icon.style.display = isSidebarCollapsed ? "none" : "inline-block";
+                });
+    
+                // Close all submenus when collapsing the sidebar
+                if (isSidebarCollapsed) {
+                    submenus.forEach(menu => menu.classList.remove("show"));
+                }
+            }
+            adjustMainContent();
+        });
+    
+        navItems.forEach(navItem => {
+            navItem.addEventListener("click", function (event) {
+                event.stopPropagation();
+                const submenu = this.querySelector(".submenu-options");
+    
+                if (!submenu) return;
+    
+                if (sidebar.classList.contains("collapsed")) {
+                    // Expand sidebar if it's collapsed
+                    sidebar.classList.remove("collapsed");
+                    isSidebarCollapsed = false;
+                    adjustMainContent();
+    
+                    // Show text labels and dropdown icons again
+                    navLabels.forEach(label => (label.style.display = "inline-block"));
+                    dropdownIcons.forEach(icon => (icon.style.display = "inline-block"));
+    
+                    // Delay submenu opening slightly for smooth transition
+                    setTimeout(() => {
+                        submenu.classList.add("show");
+                    }, 300);
+                } else {
+                    // Sidebar is expanded, toggle submenu
+                    submenus.forEach(menu => {
+                        if (menu !== submenu) {
+                            menu.classList.remove("show");
+                        }
+                    });
+    
+                    submenu.classList.toggle("show");
+                }
+            });
+        });
+    
+        // Close sidebar on mobile when clicking outside
+        document.addEventListener("click", function (event) {
+            if (!sidebar.contains(event.target) && !toggleSidebarBtn.contains(event.target) && window.innerWidth <= 767) {
+                sidebar.classList.remove("expanded");
+                document.body.classList.remove("sidebar-open");
+            }
+        });
+    
+        // Close all submenus when clicking outside the sidebar
+        document.addEventListener("click", function (event) {
+            if (!event.target.closest(".nav-item")) {
+                submenus.forEach(menu => menu.classList.remove("show"));
+            }
+        });
+    });
+    
+        </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

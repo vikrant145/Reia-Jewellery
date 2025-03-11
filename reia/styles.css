@@ -314,13 +314,14 @@ header {
 /* Mobile styles */
 @media only screen and (max-width: 767px) {
     .sidebar {
-        width: 59%;
+        width: 60%;
         transform: translateX(-100%);
         top: 56px;
     }
 
     .sidebar.expanded {
         transform: translateX(0);
+        z-index:100;
     }
 
     header {
@@ -358,11 +359,7 @@ header {
   
 
 
-
-
-
-/* ItemUploadScreen */
-
+/* ITEMS UPLOAD SCREEN CSS*/
 .itemuploadcontainer{
     margin-top: 30px;
 }
@@ -415,8 +412,11 @@ header {
     font-weight: bold !important;
     color: white;
 }
-.itemuploadcardmain{
+.itemuploadmain-card{
     background-color: #f4ecdc;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+   padding: 25px;
 
 }
 .selectformitemupload{
@@ -434,10 +434,7 @@ header {
 
 
 
-.itemuploadcardmain{
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
+
 /* Responsive Adjustments */
 @media (max-width: 992px) {
     .fileuploaddflexmb3{
@@ -526,7 +523,7 @@ header {
         margin-bottom: 10px;
     }
 }
-@media (max-width: 382px) {
+@media (max-width: 440px) {
     .fileuploadinput {
         width: 100% !important;
     }
@@ -541,6 +538,27 @@ header {
         text-align: left;
     }
 }
+@media (max-width: 361px) {
+    .fileuploadinput {
+        width: 123% !important;
+    }
+
+    .dflexalignitemscenterlabelinput {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .fileuploadlabel {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+
+
+
+
+
 
 
 

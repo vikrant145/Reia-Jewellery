@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div id="sidebar" class="sidebar d-flex flex-column">
+            <div class="logo mb-3 d-flex align-items-center ps-3">
+                <img src="images/logo2.png" alt="Logo" class="small-logo me-2">
+                <span class="text-dark fw-bold">reiaadmin</span>
+            </div>
+
+            <ul class="nav flex-column flex-grow-1">
+                <li class="nav-item mb-2">
+                    <a href="#" class="nav-link active text-dark fw-bold">
+                        <i class="bi bi-house-door me-2"></i>
+                        <span class="link-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-dark">
+                        <i class="bi bi-tag me-2"></i>
+                        <span class="link-text">Item Details</span>
+                        <i class="bi bi-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="list-unstyled ms-5 submenu-options">
+                        <li>
+                            <label class="d-flex align-items-center">
+                                <input type="radio" name="menu" class="custom-radio me-2">
+                                SKU/HUID
+                            </label>
+                        </li>
+                        <li>
+                            <label class="d-flex align-items-center">
+                                <input type="radio" name="menu" class="custom-radio me-2">
+                                Parent Code
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-dark">
+                        <i class="bi bi-list me-2"></i>
+                        <span class="link-text">Items Update</span>
+                        <i class="bi bi-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="list-unstyled ms-5 submenu-options">
+                        <li>
+                            <label class="d-flex align-items-center">
+                                <input type="radio" name="menu" class="custom-radio me-2">
+                                In Stock
+                            </label>
+                        </li>
+                        <li>
+                            <label class="d-flex align-items-center">
+                                <input type="radio" name="menu" class="custom-radio me-2">
+                                Purchase
+                            </label>
+                        </li>
+                        <li>
+                            <label class="d-flex align-items-center">
+                                <input type="radio" name="menu" class="custom-radio me-2">
+                                Sold
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-dark">
+                        <i class="bi bi-card-image me-2"></i>
+                        <span class="link-text">Image Upload</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-dark">
+                        <i class="bi bi-box-arrow-up-right me-2"></i>
+                        <span class="link-text">Item Stock Update</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-dark">
+                        <i class="bi bi-box-arrow-left me-2"></i>
+                        <span class="link-text">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <header class="d-flex justify-content-between align-items-center p-3 shadow-none border">
+            <!-- Sidebar Toggle -->
+            <button id="toggle-sidebar" class="btn btn-outline-dark btn-sm border-0">
+                <i class="bi bi-list"></i>
+            </button>
+            <!-- Logo -->
+            <div class="text-center">
+                <img src="images/reiajewellerylogo.png" alt="Reia Logo" class="header-logo">
+            </div>
+            <!-- Profile Section -->
+            <div class="d-flex align-items-center">
+                <span class="me-2">reiaadmin</span>
+                <i class="bi bi-person"></i>
+            </div>
+        </header>
+        
+        <!-- Status Section -->
+        <div class="main-content flex-grow-1 mt-5">
+            <div class="container mt-4">
+                <p>Home / Dashboard</p>
+                <div class="imagedetailsstats-container">
+                    <div class="imagedetailsdashboardstat-card">
+                        <div class="imagedetailsdashboardtop-section">
+                            <h4>756</h4>
+                            <i class="bi bi-box-seam"></i> <!-- Box Icon -->
+                        </div>
+                        <p>In Stock Items</p>
+                    </div>
+                    <div class="imagedetailsdashboardstat-card">
+                        <div class="imagedetailsdashboardtop-section">
+                            <h4>0</h4>
+                            <i class="bi bi-puzzle"></i> <!-- Puzzle Piece Icon -->
+                        </div>
+                        <p>Matched</p>
+                    </div>
+                    <div class="imagedetailsdashboardstat-card">
+                        <div class="imagedetailsdashboardtop-section">
+                            <h4>24</h4>
+                            <i class="bi bi-file-earmark-text"></i> <!-- Document Icon -->
+                        </div>
+                        <p>Memo</p>
+                    </div>
+                    <div class="imagedetailsdashboardstat-card">
+                        <div class="imagedetailsdashboardtop-section">
+                            <h4>943</h4>
+                            <i class="bi bi-bag-check"></i> <!-- Sold/Bag Icon -->
+                        </div>
+                        <p>Sold</p>
+                    </div>
+                    <div class="imagedetailsdashboardstat-card imagedetailsdashboardhighlight-card">
+                        <div class="imagedetailsdashboardtop-section">
+                            <div class="left-section">
+                                <h4>1623</h4>
+                                <p><a href="#">Total Images</a></p>
+                            </div>
+                            <div class="dashboardright-section">
+                                <i class="bi bi-arrow-right"></i> 
+                                <p mt-3><a href="#">View All</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            
+           
+                <div class="imagedetailssearch-bar mt-4">
+                    <div class="imagedetailssearch-container">
+                        <div class="imagedetailssearch-label">SKU / HUID</div>
+                        <div class="d-flex align-items-center imagedetailsparentcodeinputbox">
+                            <input type="text" class="imagedetailssearch-input">
+                            <button class="imagedetailssearch-btn">SEARCH</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="imagedetails-card">
+                        <div class="imagedetailsheader-box">VIEW IMAGE DETAILS</div>
+                        
+                        <div class="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 row-cols-1 g-3 mb-0 imgcardsrowcolslg imgcardsrowcolssm2 imgcardrowcols1">
+                            <div class="col-md-3 imgdetailsdasboardcol-md-3">
+                                <div class="text-center">
+                                    <div class="bg-dark text-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="bi bi-image" style="font-size: 50px;"></i>
+                                    </div>
+                                    <p class="mt-2"><b>SKU: PIDHHF7</b><br>Parent Code: CLS|RNG|887</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 imgdetailsdasboardcol-md-3">
+                                <div class="text-center">
+                                    <div class="bg-dark text-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="bi bi-image" style="font-size: 50px;"></i>
+                                    </div>
+                                    <p class="mt-2"><b>SKU: PIDHHF7</b><br>Parent Code: CLS|RNG|887</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 imgdetailsdasboardcol-md-3">
+                                <div class="text-center">
+                                    <div class="bg-dark text-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="bi bi-image" style="font-size: 50px;"></i>
+                                    </div>
+                                    <p class="mt-2"><b>SKU: PIDHHF7</b><br>Parent Code: CLS|RNG|887</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 imgdetailsdasboardcol-md-3">
+                                <div class="text-center">
+                                    <div class="bg-dark text-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="bi bi-image" style="font-size: 50px;"></i>
+                                    </div>
+                                    <p class="mt-2"><b>SKU: PIDHHF7</b><br>Parent Code: CLS|RNG|887</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 imgdetailsdasboardcol-md-3">
+                                <div class="text-center">
+                                    <div class="bg-dark text-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="bi bi-image" style="font-size: 50px;"></i>
+                                    </div>
+                                    <p class="mt-2"><b>SKU: PIDHHF7</b><br>Parent Code: CLS|RNG|887</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 imgdetailsdasboardcol-md-3">
+                                <div class="text-center">
+                                    <div class="bg-dark text-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="bi bi-image" style="font-size: 50px;"></i>
+                                    </div>
+                                    <p class="mt-2"><b>SKU: PIDHHF7</b><br>Parent Code: CLS|RNG|887</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 imgdetailsdasboardcol-md-3">
+                                <div class="text-center">
+                                    <div class="bg-dark text-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="bi bi-image" style="font-size: 50px;"></i>
+                                    </div>
+                                    <p class="mt-2"><b>SKU: PIDHHF7</b><br>Parent Code: CLS|RNG|887</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 imgdetailsdasboardcol-md-3">
+                                <div class="text-center">
+                                    <div class="bg-dark text-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="bi bi-image" style="font-size: 50px;"></i>
+                                    </div>
+                                    <p class="mt-2"><b>SKU: PIDHHF7</b><br>Parent Code: CLS|RNG|887</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 imgdetailsdasboardcol-md-3">
+                                <div class="text-center">
+                                    <div class="bg-dark text-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="bi bi-image" style="font-size: 50px;"></i>
+                                    </div>
+                                    <p class="mt-2"><b>SKU: PIDHHF7</b><br>Parent Code: CLS|RNG|887</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 imgdetailsdasboardcol-md-3">
+                                <div class="text-center">
+                                    <div class="bg-dark text-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="bi bi-image" style="font-size: 50px;"></i>
+                                    </div>
+                                    <p class="mt-2"><b>SKU: PIDHHF7</b><br>Parent Code: CLS|RNG|887</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 imgdetailsdasboardcol-md-3">
+                                <div class="text-center">
+                                    <div class="bg-dark text-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="bi bi-image" style="font-size: 50px;"></i>
+                                    </div>
+                                    <p class="mt-2"><b>SKU: PIDHHF7</b><br>Parent Code: CLS|RNG|887</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 imgdetailsdasboardcol-md-3">
+                                <div class="text-center">
+                                    <div class="bg-dark text-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="bi bi-image" style="font-size: 50px;"></i>
+                                    </div>
+                                    <p class="mt-2"><b>SKU: PIDHHF7</b><br>Parent Code: CLS|RNG|887</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 imgdetailsdasboardcol-md-3">
+                                <div class="text-center">
+                                    <div class="bg-dark text-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="bi bi-image" style="font-size: 50px;"></i>
+                                    </div>
+                                    <p class="mt-2"><b>SKU: PIDHHF7</b><br>Parent Code: CLS|RNG|887</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 imgdetailsdasboardcol-md-3">
+                                <div class="text-center">
+                                    <div class="bg-dark text-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="bi bi-image" style="font-size: 50px;"></i>
+                                    </div>
+                                    <p class="mt-2"><b>SKU: PIDHHF7</b><br>Parent Code: CLS|RNG|887</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 imgdetailsdasboardcol-md-3">
+                                <div class="text-center">
+                                    <div class="bg-dark text-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="bi bi-image" style="font-size: 50px;"></i>
+                                    </div>
+                                    <p class="mt-2"><b>SKU: PIDHHF7</b><br>Parent Code: CLS|RNG|887</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 imgdetailsdasboardcol-md-3">
+                                <div class="text-center">
+                                    <div class="bg-dark text-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="bi bi-image" style="font-size: 50px;"></i>
+                                    </div>
+                                    <p class="mt-2"><b>SKU: PIDHHF7</b><br>Parent Code: CLS|RNG|887</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 imgdetailsdasboardcol-md-3">
+                                <div class="text-center">
+                                    <div class="bg-dark text-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="bi bi-image" style="font-size: 50px;"></i>
+                                    </div>
+                                    <p class="mt-2"><b>SKU: PIDHHF7</b><br>Parent Code: CLS|RNG|887</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 imgdetailsdasboardcol-md-3">
+                                <div class="text-center">
+                                    <div class="bg-dark text-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="bi bi-image" style="font-size: 50px;"></i>
+                                    </div>
+                                    <p class="mt-2"><b>SKU: PIDHHF7</b><br>Parent Code: CLS|RNG|887</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 imgdetailsdasboardcol-md-3">
+                                <div class="text-center">
+                                    <div class="bg-dark text-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="bi bi-image" style="font-size: 50px;"></i>
+                                    </div>
+                                    <p class="mt-2"><b>SKU: PIDHHF7</b><br>Parent Code: CLS|RNG|887</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 imgdetailsdasboardcol-md-3">
+                                <div class="text-center">
+                                    <div class="bg-dark text-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="bi bi-image" style="font-size: 50px;"></i>
+                                    </div>
+                                    <p class="mt-2"><b>SKU: PIDHHF7</b><br>Parent Code: CLS|RNG|887</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Pagination -->
+                       <!-- Pagination -->
+                        <div class="pagination-container imagedetailscustom-pagination">
+                            <nav>
+                                <ul class="pagination">
+                                    <li class="page-item disabled"><a class="page-link" href="#">«</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">...</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">50</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">»</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.getElementById("sidebar");
+    const toggleSidebarBtn = document.getElementById("toggle-sidebar");
+    const navItems = document.querySelectorAll(".nav-item");
+    const navLabels = document.querySelectorAll(".nav-item span"); // Select text labels
+    const dropdownIcons = document.querySelectorAll(".dropdown-icon");
+    const submenus = document.querySelectorAll(".submenu-options");
+    const mainContent = document.querySelector(".main-content");
+
+    let isSidebarCollapsed = false;
+
+    function adjustMainContent() {
+        if (window.innerWidth > 767) {
+            mainContent.style.marginLeft = sidebar.classList.contains("collapsed") ? "80px" : "250px";
+        } else {
+            mainContent.style.marginTop = "56px";
+            mainContent.style.marginLeft = "0";
+        }
+    }
+
+    adjustMainContent();
+    window.addEventListener("resize", adjustMainContent);
+
+    toggleSidebarBtn.addEventListener("click", function () {
+        if (window.innerWidth <= 767) {
+            sidebar.classList.toggle("expanded");
+            document.body.classList.toggle("sidebar-open");
+        } else {
+            isSidebarCollapsed = !isSidebarCollapsed;
+            sidebar.classList.toggle("collapsed");
+
+            // Hide text labels when collapsed
+            navLabels.forEach(label => {
+                label.style.display = isSidebarCollapsed ? "none" : "inline-block";
+            });
+
+            // Hide dropdown icons when collapsed
+            dropdownIcons.forEach(icon => {
+                icon.style.display = isSidebarCollapsed ? "none" : "inline-block";
+            });
+
+            // Close all submenus when collapsing the sidebar
+            if (isSidebarCollapsed) {
+                submenus.forEach(menu => menu.classList.remove("show"));
+            }
+        }
+        adjustMainContent();
+    });
+
+    navItems.forEach(navItem => {
+        navItem.addEventListener("click", function (event) {
+            event.stopPropagation();
+            const submenu = this.querySelector(".submenu-options");
+
+            if (!submenu) return;
+
+            if (sidebar.classList.contains("collapsed")) {
+                // Expand sidebar if it's collapsed
+                sidebar.classList.remove("collapsed");
+                isSidebarCollapsed = false;
+                adjustMainContent();
+
+                // Show text labels and dropdown icons again
+                navLabels.forEach(label => (label.style.display = "inline-block"));
+                dropdownIcons.forEach(icon => (icon.style.display = "inline-block"));
+
+                // Delay submenu opening slightly for smooth transition
+                setTimeout(() => {
+                    submenu.classList.add("show");
+                }, 300);
+            } else {
+                // Sidebar is expanded, toggle submenu
+                submenus.forEach(menu => {
+                    if (menu !== submenu) {
+                        menu.classList.remove("show");
+                    }
+                });
+
+                submenu.classList.toggle("show");
+            }
+        });
+    });
+
+    // Close sidebar on mobile when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!sidebar.contains(event.target) && !toggleSidebarBtn.contains(event.target) && window.innerWidth <= 767) {
+            sidebar.classList.remove("expanded");
+            document.body.classList.remove("sidebar-open");
+        }
+    });
+
+    // Close all submenus when clicking outside the sidebar
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".nav-item")) {
+            submenus.forEach(menu => menu.classList.remove("show"));
+        }
+    });
+});
+
+    </script>
+    
+</body>
+</html>

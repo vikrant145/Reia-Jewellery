@@ -1,4 +1,5 @@
 /* LoginPage styles */
+
 .loginpage-body{
     background-color: #f4ecdc;
     display: flex;
@@ -198,8 +199,9 @@ gap: 5px;
 .dashboardd-flex{
 flex-direction: column;
 }
-
-
+.dflexresponsiveadj{
+    flex-direction: column;
+}
 }
 
 
@@ -227,6 +229,9 @@ flex-direction: column;
 }
 .sidebar.collapsed .logo span {
     display: none; 
+}
+.sidebar.collapsed .nav-item .dropdown-icon {
+    display: none;
 }
 .custom-radio {
     appearance: none;
@@ -349,13 +354,7 @@ header {
     }
 }
 
-@media only screen and (max-width:767px) {
-    .logout-btn{
-        position: relative;
-        top: -57px;
-    }
-    
-}
+
   
 
 
@@ -553,6 +552,18 @@ header {
         text-align: left;
     }
 }
+@media only screen and (max-width:480px){
+    .searchinputitemupload{
+        margin-top: 10px;
+    }     
+}
+@media only screen and (max-width:335px) {
+    .itemuploadsearchlabel{
+        left: -10px;
+        position: relative;
+        margin-top: 10px;
+    }
+}
 
 
  /* Item Details Screen Css*/
@@ -689,6 +700,11 @@ header {
     font-size: 13px;
     width: 160px; /* Adjusted size */
 }
+@media only screen and (max-width:434px) {
+    .itemdetailssearch-btn {
+        margin-top: 10px;
+    }
+}
 @media only screen and (max-width:435px) {
     .itemdetailsfirstsearchbox{
         flex-direction: column;
@@ -704,6 +720,11 @@ header {
     .itemdetailsprice-box{
         width: 100px;
   }
+}
+@media only screen and (max-width:768px) {
+    .itemdetailsimage-placeholder{
+        margin-top: 10px;
+    }
 }
 
 /* itemstockupdate screen css*/
@@ -735,7 +756,7 @@ header {
     margin-bottom: 20px;
 }
 .itemstockupdatetype-container select, .itemstockupdatesku-huid-input input {
-    width: 250px; /* Adjusted to match the image */
+    width: 250px; 
 }
 .itemstockupdatesku-huid-input {
     width: 250px; /* Fixed width */
@@ -750,6 +771,13 @@ header {
     color: white !important;
 }
 
+/* Keep header contrast */
+.table thead th {
+    background-color: #a19487 !important;
+    color: white !important;
+}
+
+
 .custom-itemuploadscreen-table .table {
 border-collapse: collapse;
 border: 1px solid #dee2e6;
@@ -762,20 +790,27 @@ background-color: white !important;
 border: 1px solid #dee2e6 !important;
 }
 
+.custom-itemuploadscreen-table .table thead th {
+    background-color: #a19487 !important;
+    color: white !important;
+    }
+    
+
 .custom-itemuploadscreen-table .table tbody tr td[colspan] {
 border-right: none !important;
 border-left: none !important;
 background-color: white !important;
 }
 
-.custom-itemuploadscreen-table .table thead th {
-background-color: #a19487 !important;
-color: white !important;
-}
 
 .custom-itemuploadscreen-table .matchbutton {
 background-color: #a19487;
 color: white;
+}
+@media only screen and (max-width:360px) {
+    .itemstockupdatetype-container select, .itemstockupdatesku-huid-input input {
+        width: 200px; 
+    }
 }
 
 
@@ -1041,7 +1076,12 @@ text-align: center;
     }
 }
 
-
+@media only screen and (max-width:434px) {
+    .imagedetailssearch-btn{
+        margin-top: 10px;
+    }
+    
+}
 
     
     

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidebar Dashboard</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link
@@ -366,7 +366,7 @@
                 <div class="dashboardreport-card">
                     <!-- Search Section Inside a White Card -->
                     <div class="card p-3 mb-3">
-                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex justify-content-between align-items-center dflexresponsiveadj">
                             <h5 class="fw-bold productsavailabletxt">PRODUCTS AVAILABLE</h5>
                             <div class="d-flex">
                                 <input type="text" class="form-control form-control-sm dashboardform-control" placeholder="Search">
@@ -420,28 +420,29 @@
     </div>
 </div>
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
+   document.addEventListener("DOMContentLoaded", function () {
     const sidebar = document.getElementById("sidebar");
     const toggleSidebarBtn = document.getElementById("toggle-sidebar");
     const navItems = document.querySelectorAll(".nav-item");
-    const navLabels = document.querySelectorAll(".nav-item span"); // Select text labels
-    const dropdownIcons = document.querySelectorAll(".dropdown-icon");
     const submenus = document.querySelectorAll(".submenu-options");
     const mainContent = document.querySelector(".main-content");
-
+    const header = document.querySelector("header");
     let isSidebarCollapsed = false;
 
-    function adjustMainContent() {
+    function adjustLayout() {
         if (window.innerWidth > 767) {
             mainContent.style.marginLeft = sidebar.classList.contains("collapsed") ? "80px" : "250px";
+            header.style.left = sidebar.classList.contains("collapsed") ? "80px" : "250px";
+            header.style.width = sidebar.classList.contains("collapsed") ? "calc(100% - 80px)" : "calc(100% - 250px)";
         } else {
-            mainContent.style.marginTop = "56px";
             mainContent.style.marginLeft = "0";
+            header.style.left = "0";
+            header.style.width = "100%";
         }
     }
 
-    adjustMainContent();
-    window.addEventListener("resize", adjustMainContent);
+    adjustLayout();
+    window.addEventListener("resize", adjustLayout);
 
     toggleSidebarBtn.addEventListener("click", function () {
         if (window.innerWidth <= 767) {
@@ -450,23 +451,8 @@
         } else {
             isSidebarCollapsed = !isSidebarCollapsed;
             sidebar.classList.toggle("collapsed");
-
-            // Hide text labels when collapsed
-            navLabels.forEach(label => {
-                label.style.display = isSidebarCollapsed ? "none" : "inline-block";
-            });
-
-            // Hide dropdown icons when collapsed
-            dropdownIcons.forEach(icon => {
-                icon.style.display = isSidebarCollapsed ? "none" : "inline-block";
-            });
-
-            // Close all submenus when collapsing the sidebar
-            if (isSidebarCollapsed) {
-                submenus.forEach(menu => menu.classList.remove("show"));
-            }
+            adjustLayout();
         }
-        adjustMainContent();
     });
 
     navItems.forEach(navItem => {
@@ -477,33 +463,22 @@
             if (!submenu) return;
 
             if (sidebar.classList.contains("collapsed")) {
-                // Expand sidebar if it's collapsed
                 sidebar.classList.remove("collapsed");
                 isSidebarCollapsed = false;
-                adjustMainContent();
+                adjustLayout();
 
-                // Show text labels and dropdown icons again
-                navLabels.forEach(label => (label.style.display = "inline-block"));
-                dropdownIcons.forEach(icon => (icon.style.display = "inline-block"));
-
-                // Delay submenu opening slightly for smooth transition
                 setTimeout(() => {
                     submenu.classList.add("show");
                 }, 300);
             } else {
-                // Sidebar is expanded, toggle submenu
                 submenus.forEach(menu => {
-                    if (menu !== submenu) {
-                        menu.classList.remove("show");
-                    }
+                    if (menu !== submenu) menu.classList.remove("show");
                 });
-
                 submenu.classList.toggle("show");
             }
         });
     });
 
-    // Close sidebar on mobile when clicking outside
     document.addEventListener("click", function (event) {
         if (!sidebar.contains(event.target) && !toggleSidebarBtn.contains(event.target) && window.innerWidth <= 767) {
             sidebar.classList.remove("expanded");
@@ -511,7 +486,6 @@
         }
     });
 
-    // Close all submenus when clicking outside the sidebar
     document.addEventListener("click", function (event) {
         if (!event.target.closest(".nav-item")) {
             submenus.forEach(menu => menu.classList.remove("show"));

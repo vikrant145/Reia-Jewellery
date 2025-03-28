@@ -1088,7 +1088,7 @@ text-align: center;
 /* viewpricebreakupscreen css */
 
 .view-price-breakup-btn {
-    background: #9b8b7f; 
+    background: #a3917f; 
     color: white;
     text-align: center;
     padding: 10px;
@@ -1125,7 +1125,7 @@ text-align: center;
     font-size: 18px;
     font-weight: bold;
     color: #5e4233;
-    border-bottom: 2px solid #8b6f55;
+    border-bottom: 2px solid #a3917f;
     margin-bottom: 10px;
 }
 
@@ -1142,7 +1142,7 @@ text-align: center;
 }
 
 .pricebreakup-value-box {
-    background: #9b8b7f;
+    background: #a3917f;
     color: #fff;
     padding: 10px;
     border-radius: 5px;
@@ -1181,6 +1181,14 @@ text-align: center;
     align-items: flex-start;
 }
 /* Responsive Styles */
+@media only screen and (max-width:1055px) {
+    .diamondfinal-card{
+        margin-top: 10px !important;
+    }
+    .diamond-card{
+        margin-top: 10px !important;
+    }
+}
 @media (max-width: 768px) {
     .diamond-card {
         width: 100%; /* Full width for smaller screens */
@@ -1201,7 +1209,7 @@ text-align: center;
 
     .pricebreakup-d-flex {
         flex-direction: column;
-        align-items: center;
+        align-items: center !important;
     }
 
     .pricebreakup-value-box {

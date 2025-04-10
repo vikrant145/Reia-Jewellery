@@ -243,10 +243,10 @@
                 <div class="pricebreakup-d-flex pricebreakup-flex-wrap pricebreakup-flex-grow-1">
                     <div class="diamond-card shadow me-3">
                         <h5>1 Carat</h5>
-                        <p class="mb-1">Number of Diamonds:</p>
-                        <p class="mb-1">Total Carat:</p>
-                        <p class="mb-1">Colour + Clarity:</p>
-                        <p class="total">Total: Rs.xxxx</p>
+                        <p class="mb-1">Number of Diamonds:86</p>
+                        <p class="mb-1">Total Carat:1.940</p>
+                        <p class="mb-1">Colour + Clarity:EF+VVS</p>
+                        <p class="total">Total: Rs.909325.00</p>
                     </div>
                     <div class="diamond-card shadow me-3">
                         <h5>0.3 Carat</h5>
@@ -322,78 +322,85 @@
      </div>
             </div>
             <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                 const sidebar = document.getElementById("sidebar");
-                 const toggleSidebarBtn = document.getElementById("toggle-sidebar");
-                 const navItems = document.querySelectorAll(".nav-item");
-                 const submenus = document.querySelectorAll(".submenu-options");
-                 const mainContent = document.querySelector(".main-content");
-                 const header = document.querySelector("header");
-                 let isSidebarCollapsed = false;
-             
-                 function adjustLayout() {
-                     if (window.innerWidth > 767) {
-                         mainContent.style.marginLeft = sidebar.classList.contains("collapsed") ? "80px" : "250px";
-                         header.style.left = sidebar.classList.contains("collapsed") ? "80px" : "250px";
-                         header.style.width = sidebar.classList.contains("collapsed") ? "calc(100% - 80px)" : "calc(100% - 250px)";
-                     } else {
-                         mainContent.style.marginLeft = "0";
-                         header.style.left = "0";
-                         header.style.width = "100%";
-                     }
-                 }
-             
-                 adjustLayout();
-                 window.addEventListener("resize", adjustLayout);
-             
-                 toggleSidebarBtn.addEventListener("click", function () {
-                     if (window.innerWidth <= 767) {
-                         sidebar.classList.toggle("expanded");
-                         document.body.classList.toggle("sidebar-open");
-                     } else {
-                         isSidebarCollapsed = !isSidebarCollapsed;
-                         sidebar.classList.toggle("collapsed");
-                         adjustLayout();
-                     }
-                 });
-             
-                 navItems.forEach(navItem => {
-                     navItem.addEventListener("click", function (event) {
-                         event.stopPropagation();
-                         const submenu = this.querySelector(".submenu-options");
-             
-                         if (!submenu) return;
-             
-                         if (sidebar.classList.contains("collapsed")) {
-                             sidebar.classList.remove("collapsed");
-                             isSidebarCollapsed = false;
-                             adjustLayout();
-             
-                             setTimeout(() => {
-                                 submenu.classList.add("show");
-                             }, 300);
-                         } else {
-                             submenus.forEach(menu => {
-                                 if (menu !== submenu) menu.classList.remove("show");
-                             });
-                             submenu.classList.toggle("show");
-                         }
-                     });
-                 });
-             
-                 document.addEventListener("click", function (event) {
-                     if (!sidebar.contains(event.target) && !toggleSidebarBtn.contains(event.target) && window.innerWidth <= 767) {
-                         sidebar.classList.remove("expanded");
-                         document.body.classList.remove("sidebar-open");
-                     }
-                 });
-             
-                 document.addEventListener("click", function (event) {
-                     if (!event.target.closest(".nav-item")) {
-                         submenus.forEach(menu => menu.classList.remove("show"));
-                     }
-                 });
-             });
+               document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.getElementById("sidebar");
+    const toggleSidebarBtn = document.getElementById("toggle-sidebar");
+    const navItems = document.querySelectorAll(".nav-item");
+    const submenus = document.querySelectorAll(".submenu-options");
+    const mainContent = document.querySelector(".main-content");
+    const header = document.querySelector("header");
+    let isSidebarCollapsed = false;
+ 
+
+    function adjustLayout() {
+    const isMobile = window.innerWidth <= 768;
+
+    if (sidebar.classList.contains("expanded")) {
+        if (!isMobile) {
+            mainContent.style.marginLeft = "250px";
+            header.style.left = "250px";
+            header.style.width = "calc(100% - 250px)";
+        } else {
+            mainContent.style.marginLeft = "0";
+            header.style.left = "0";
+            header.style.width = "100%";
+        }
+    } else {
+        mainContent.style.marginLeft = "0";
+        header.style.left = "0";
+        header.style.width = "100%";
+    }
+}
+
+
+    adjustLayout();
+    window.addEventListener("resize", adjustLayout);
+
+    toggleSidebarBtn.addEventListener("click", function () {
+        sidebar.classList.toggle("expanded");
+        document.body.classList.toggle("sidebar-open");
+        adjustLayout();
+
+    });
+
+    navItems.forEach(navItem => {
+        navItem.addEventListener("click", function (event) {
+            event.stopPropagation();
+            const submenu = this.querySelector(".submenu-options");
+
+            if (!submenu) return;
+
+            if (sidebar.classList.contains("collapsed")) {
+                sidebar.classList.remove("collapsed");
+                isSidebarCollapsed = false;
+                adjustLayout();
+
+                setTimeout(() => {
+                    submenu.classList.add("show");
+                }, 300);
+            } else {
+                submenus.forEach(menu => {
+                    if (menu !== submenu) menu.classList.remove("show");
+                });
+                submenu.classList.toggle("show");
+            }
+        });
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!sidebar.contains(event.target) && !toggleSidebarBtn.contains(event.target) && window.innerWidth <= 767) {
+            sidebar.classList.remove("expanded");
+            document.body.classList.remove("sidebar-open");
+        }
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".nav-item")) {
+            submenus.forEach(menu => menu.classList.remove("show"));
+        }
+    });
+});
+
 
              function togglePriceBreakup() {
     let sections = document.querySelectorAll(".pricebreakup-section");

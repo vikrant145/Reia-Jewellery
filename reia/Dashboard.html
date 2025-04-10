@@ -134,7 +134,7 @@
                         </div>
                         <p>In Stock Items</p>
                     </div>
-                    <div class="dashboardstat-card">
+                    <div class="dashboardstat-card dashboardmatched-card">
                         <div class="dashboardtop-section">
                             <h4>0</h4>
                             <i class="bi bi-puzzle"></i> <!-- Puzzle Piece Icon -->
@@ -155,7 +155,7 @@
                         </div>
                         <p>Sold</p>
                     </div>
-                    <div class="dashboardstat-card dashboardhighlight-card">
+                    <div class="dashboardstat-card dashboardhighlight-card dashboardtotalimages-card">
                         <div class="dashboardtop-section">
                             <div class="left-section">
                                 <h4>1623</h4>
@@ -344,7 +344,7 @@
              <!-- Weight Details and Export Buttons -->
             <!-- Weight Details and Export Buttons in a Box -->
             <div class="container-fluid mt-3">
-                <div class="d-flex justify-content-between align-items-center p-3 dasboardjustify-content-between dashboardd-flex weight-container">
+                <div class="d-flex justify-content-between align-items-center dasboardjustify-content-between dashboardd-flex weight-container">
                     <!-- Left Side: Boxed Weight Details -->
                     <div class="d-flex dashboardd-flex">
                         <span class="px-3 py-2 border rounded text-white me-2 weight-box">Gross Weight:</span>
@@ -428,31 +428,37 @@
     const mainContent = document.querySelector(".main-content");
     const header = document.querySelector("header");
     let isSidebarCollapsed = false;
+ 
 
     function adjustLayout() {
-        if (window.innerWidth > 767) {
-            mainContent.style.marginLeft = sidebar.classList.contains("collapsed") ? "80px" : "250px";
-            header.style.left = sidebar.classList.contains("collapsed") ? "80px" : "250px";
-            header.style.width = sidebar.classList.contains("collapsed") ? "calc(100% - 80px)" : "calc(100% - 250px)";
+    const isMobile = window.innerWidth <= 768;
+
+    if (sidebar.classList.contains("expanded")) {
+        if (!isMobile) {
+            mainContent.style.marginLeft = "250px";
+            header.style.left = "250px";
+            header.style.width = "calc(100% - 250px)";
         } else {
             mainContent.style.marginLeft = "0";
             header.style.left = "0";
             header.style.width = "100%";
         }
+    } else {
+        mainContent.style.marginLeft = "0";
+        header.style.left = "0";
+        header.style.width = "100%";
     }
+}
+
 
     adjustLayout();
     window.addEventListener("resize", adjustLayout);
 
     toggleSidebarBtn.addEventListener("click", function () {
-        if (window.innerWidth <= 767) {
-            sidebar.classList.toggle("expanded");
-            document.body.classList.toggle("sidebar-open");
-        } else {
-            isSidebarCollapsed = !isSidebarCollapsed;
-            sidebar.classList.toggle("collapsed");
-            adjustLayout();
-        }
+        sidebar.classList.toggle("expanded");
+        document.body.classList.toggle("sidebar-open");
+        adjustLayout();
+
     });
 
     navItems.forEach(navItem => {

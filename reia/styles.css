@@ -157,7 +157,7 @@ background-color: #8c7f72;
 color:#a19487 ;
 }        
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
 .dashboardstats-container {
 flex-wrap: wrap;
 justify-content: center;

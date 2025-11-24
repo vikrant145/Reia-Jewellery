@@ -136,20 +136,70 @@
             </div>
 
                 <!-- File Upload Section -->
-                <div class="d-flex align-items-center mb-3 fileuploaddflexmb3">
-                    <!-- Sample Upload Format button (Left Side) -->
-                    <button class="btn btn-info me-auto sampleuploadformatbtn">Sample Upload Format</button>
+                <div class="mb-3 fileuploaddflexmb3">
 
-                    <!-- File Upload (Moved further left) -->
-                    <div class="d-flex align-items-center dflexalignitemscenterlabelinput">
-                        <label for="fileUpload" class="fw-bold me-2 fileuploadlabel">File:</label>
-                        <input type="file" id="fileUpload" class="form-control w-auto fileuploadinput">
+                    <!-- Row 1: Image 1, Image 2, Image 3 -->
+                    <div class="d-flex justify-content-center gap-4 mb-3 threeimages-row">
+
+                    <div class="custom-file-wrapper">
+                    <label class="fw-bold d-block mb-1">Image 1:</label>
+                    <div class="custom-file-box">
+                        <label class="custom-file-btn">Choose Image
+                            <input type="file" class="file-input-hidden">
+                        </label>
+                        <input type="text" class="custom-file-text" placeholder="" readonly>
                     </div>
-
-                    <!-- Submit Button (Right Side) -->
-                    <button class="btn ms-auto submitbtnitemupload">Submit</button>
                 </div>
 
+                <div class="custom-file-wrapper">
+                    <label class="fw-bold d-block mb-1">Image 2:</label>
+                    <div class="custom-file-box">
+                        <label class="custom-file-btn">Choose Image
+                            <input type="file" class="file-input-hidden">
+                        </label>
+                        <input type="text" class="custom-file-text" placeholder="" readonly>
+                    </div>
+                </div>
+
+                <div class="custom-file-wrapper">
+                    <label class="fw-bold d-block mb-1">Image 3:</label>
+                    <div class="custom-file-box">
+                        <label class="custom-file-btn">Choose Image
+                            <input type="file" class="file-input-hidden">
+                        </label>
+                        <input type="text" class="custom-file-text" placeholder="" readonly>
+                    </div>
+                </div>
+
+
+                    </div>
+
+                    <!-- Row 2: Sample Upload Format (left), Video + Ecom Link (center), Submit (right) -->
+                    <div class="d-flex align-items-center">
+
+                        <!-- Sample Upload Format button (Left Side) -->
+                        <button class="btn btn-info me-auto sampleuploadformatbtn">Sample Upload Format</button>
+
+                        <!-- Video + Ecom Link (Center) -->
+                        <div class="d-flex align-items-center gap-3 videolink-center">
+
+                        <div class="custom-file-wrapper">
+                    <label class="fw-bold d-block mb-1">Video:</label>
+                    <div class="custom-file-box">
+                        <label class="custom-file-btn">Choose Video
+                            <input type="file" class="file-input-hidden">
+                        </label>
+                        <input type="text" class="custom-file-text" placeholder="" readonly>
+                    </div>
+                </div>
+
+
+                        </div>
+
+                        <!-- Submit Button (Right Side) -->
+                        <button class="btn ms-auto submitbtnitemupload">Submit</button>
+                    </div>
+                </div>
                 <hr>
                 
                 <div class="container itemuploadcontainer">

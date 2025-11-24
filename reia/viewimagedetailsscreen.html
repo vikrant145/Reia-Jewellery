@@ -182,17 +182,49 @@
                 </div>
                 <div class="container">
                     <div class="imagedetails-card">
-                        <div class="imagedetailsheader-box">VIEW IMAGE DETAILS</div>
+                        <div class="imagedetailsheader-box">VIEW IMAGE DETAILS</div> 
                        
+                         <!-- FILTER ROW -->
+                    <div class="filter-row">
+                        <select class="filter-select">
+                            <option>Product Category</option>
+                        </select>
+
+                        <select class="filter-select">
+                            <option>Metal Colour</option>
+                        </select>
+
+                        <select class="filter-select">
+                            <option>Location</option>
+                        </select>
+
+                        <select class="filter-select">
+                            <option>Gemstone Colour</option>
+                        </select>
+
+                        <select class="filter-select">
+                            <option>Price Range</option>
+                        </select>
+                    </div>
 
                         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3 mb-0 imgcardsrowcolslg imgcardsrowcolssm2 imgcardrowcols1">
                             <div class="col-md-3 imgdetailsdasboardcol-md-3">
-                                <div class="text-center">
-                                    <div class="bg-dark text-light d-flex align-items-center justify-content-center" style="height: 150px;">
-                                        <i class="bi bi-image" style="font-size: 50px;"></i>
-                                    </div>
-                                    <p class="mt-2"><b>SKU: PIDHHF7</b><br>Parent Code: CLS|RNG|887</p>
+                                <div class="imagedetailsimage-card position-relative text-center">
+
+                                <!-- Checkbox (Top Left) -->
+                                <input type="checkbox" class="imgcheckbox">
+
+                                <div class="bg-dark text-light d-flex align-items-center justify-content-center" style="height: 150px; border-radius:4px;">
+                                    <i class="bi bi-image" style="font-size: 50px;"></i>
                                 </div>
+
+                                <p class="mt-2">
+                                    <b>SKU: PIDHHF7</b><br>
+                                    Parent Code: CLS|RNG|887
+                                </p>
+
+                            </div>
+
                             </div>
                             <div class="col-md-3 imgdetailsdasboardcol-md-3">
                                 <div class="text-center">
@@ -364,8 +396,30 @@
                             </nav>
                         </div>
                     </div>
-                </div>
+                </div> 
+       <div class="catalogue-container">
+    <div class="catalogue-header">CATALOGUE MAKER</div>
+
+    <!-- ROW 1 -->
+    <div class="catalogue-row top">
+        <div class="field-group">
+            <label>Customer Name:</label>
+            <input type="text" class="catalogue-input">
         </div>
+
+        <div class="field-group">
+            <label>Customer Contact Number:</label>
+            <input type="text" class="catalogue-input">
+        </div>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="catalogue-row bottom">
+        <p class="selected-text">Number of Selected Images: <strong>XX</strong></p>
+        <button class="catalogue-btn">Create Catalogue</button>
+    </div>
+</div>
+
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
